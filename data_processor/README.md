@@ -93,6 +93,3 @@ This script performs the following tasks:
 ### Notes
 - Ensure the file paths are correctly set in the scripts before running them.
 - Review the filtered pathway data and gene expression data to ensure correctness.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
