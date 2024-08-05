@@ -15,8 +15,8 @@ The script performs the following tasks:
 
 Ensure you have the following files in your specified paths:
 - Pathway information(LRP score and p-value) result CSV file (`yourResult.csv`).
-- Node data files (`Disease.tsv`, `Gene.tsv`, `Pathway.tsv`, `Compound.tsv`).
-- Edge data files (`CuG.sparse.npz`, `CdG.sparse.npz`, `CbG.sparse.npz`, `GpPW.sparse.npz`, `CtD.sparse.npz`, `DaG.sparse.npz`).
+- Node data files.
+- Edge data files.
 
 Update the paths in the script to match your file locations.
 
