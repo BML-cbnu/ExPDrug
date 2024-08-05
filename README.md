@@ -1,18 +1,23 @@
-# Deep Learning Model Utilizing Hierarchical Relationships between Genes and Pathways
+# ExPDRUG Pipeline
 
-## Quantitative Evaluation of Pathway Importance Using Explainable AI with Layer-wise Relevance Propagation
+This repository contains a deep learning training pipeline that includes data loading, preprocessing, model training, and logging. The pipeline is modular and can be configured through environment variables.
 
-## Drug Discovery in Knowledge-based Graphs Using RWR (Random Walk with Restart) Based on Pathway Importance
+## File Structure
 
-### Workflow
+- `config.py`: Configuration class that loads settings from environment variables.
+- `data_processor.py`: Handles data loading and preprocessing.
+- `logger.py`: Sets up logging to a file.
+- `model.py`: Defines the machine learning model using TensorFlow/Keras.
+- `trainer.py`: Handles the training process of the model.
+- `main.py`: Main script to run the entire pipeline.
 
-1. **Preprocessing of Gene Expression Data**
-2. **Generating Mapping Information**
-   - Consider the hierarchical relationships between genes and pathways.
-3. **Creating a Masking Matrix**
-   - Use the generated mapping information.
-4. **Filtering Pathways**
-5. **Finalizing the Gene List and Pathway List**
-6. **Running the Main Script**
-   ```bash
-   python main.py
+## Configuration
+
+Configuration is handled through environment variables. The following variables can be set:
+
+- `DATA_PATH`: Path to the data directory (default: `data/`)
+- `MODEL_SAVE_PATH`: Path to save the trained model (default: `models/`)
+- `LOG_PATH`: Path to save log files (default: `logs/`)
+- `EPOCHS`: Number of training epochs (default: 10)
+- `BATCH_SIZE`: Batch size for training (default: 32)
+- `LEARNING_RATE`: Learning rate for the optimizer (default: 0.001)
