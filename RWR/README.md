@@ -14,7 +14,7 @@ The script performs the following tasks:
 ## Data Preparation
 
 Ensure you have the following files in your specified paths:
-- Pathway result CSV file (`yourResult.csv`).
+- Pathway information(LRP score and p-value) result CSV file (`yourResult.csv`).
 - Node data files (`Disease.tsv`, `Gene.tsv`, `Pathway.tsv`, `Compound.tsv`).
 - Edge data files (`CuG.sparse.npz`, `CdG.sparse.npz`, `CbG.sparse.npz`, `GpPW.sparse.npz`, `CtD.sparse.npz`, `DaG.sparse.npz`).
 
@@ -45,14 +45,5 @@ The script prints the composition of nodes in the subgraph and the top compounds
 ### Saving Results
 
 Results are saved in two formats:
-- Cytoscape JSON for visualization (`yourfilename.json`).
+- JSON for visualization (`yourfilename.json`).
 - CSV file with compound information (`yourfilename.csv`).
-
-## Usage
-
-1. Update the file paths in the script to match your data locations.
-2. Run the script in a Python environment.
-
-```bash
-python pathway_analysis.py
-
