@@ -7,36 +7,25 @@ import scipy.sparse
 from tqdm import tqdm
 import json
 
-"""
-The process of performing a random walk using the "pathway_information.csv" file obtained from expNet's main.py
-
-"""
-
 # Load and filter the pathways from CSV
-df = pd.read_csv('/ensure/your/result/pathway/info/yourResult.csv')
+df = pd.read_csv('/path/to/your/result/pathway/info/yourResult.csv')
 df = df.sort_values(by='p_value', ascending=True)
 filtered_df_005 = df[df['p_value'] <= 0.05]
 filtered_df_001 = df[df['p_value'] <= 0.01]
 
-"""
-The nodes and edges data are read from Hetionet. You can choose them as you like,
-but the following example uses the nodes and edges used in the experiments of this paper.
- 
-"""
-
 # Load node data
-diseases = pd.read_csv('/set/your/hetioNet/data/path/nodes/Disease.tsv', sep='\t')
-genes = pd.read_csv('/set/your/hetioNet/data/path/nodes/Gene.tsv', sep='\t')
-pathways = pd.read_csv('/set/your/hetioNet/data/path/nodes/Pathway.tsv', sep='\t')
-compounds = pd.read_csv('/set/your/hetioNet/data/path/nodes/Compound.tsv', sep='\t')
+diseases = pd.read_csv('/path/to/your/hetioNet/data/path/nodes/Disease.tsv', sep='\t')
+genes = pd.read_csv('/path/to/your/hetioNet/data/path/nodes/Gene.tsv', sep='\t')
+pathways = pd.read_csv('/path/to/your/hetioNet/data/path/nodes/Pathway.tsv', sep='\t')
+compounds = pd.read_csv('/path/to/your/hetioNet/data/path/nodes/Compound.tsv', sep='\t')
 
 # Load edge data
-CuG = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/CuG.sparse.npz')
-CdG = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/CdG.sparse.npz')
-CbG = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/CbG.sparse.npz')
-GpPW = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/GpPW.sparse.npz')
-CtD = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/CtD.sparse.npz')
-DaG = scipy.sparse.load_npz('/set/your/hetioNet/data/path/edges/DaG.sparse.npz')
+CuG = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/CuG.sparse.npz')
+CdG = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/CdG.sparse.npz')
+CbG = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/CbG.sparse.npz')
+GpPW = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/GpPW.sparse.npz')
+CtD = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/CtD.sparse.npz')
+DaG = scipy.sparse.load_npz('/path/to/your/hetioNet/data/path/edges/DaG.sparse.npz')
 
 # Build the graph
 G = nx.Graph()
@@ -153,7 +142,7 @@ def print_sorted_compound_visits(visited_counts, values, top_n):
 
     return top_n_by_visit, top_n_by_spread
 
-def save_cytoscape_json(H_visited, visited_counts, values, filename):
+def save_json(H_visited, visited_counts, values, filename):
     # Prepare data in Cytoscape JSON format
     cytoscape_data = {
         "data": {},
@@ -219,7 +208,7 @@ print(f"Random walk results for p-value <= 0.01 pathways (Top {top_n}):")
 top_n_by_visit_001, top_n_by_spread_001 = print_sorted_compound_visits(average_visited_counts_001, final_values_001, top_n)
 
 # Save Cytoscape JSON for p-value <= 0.01 pathways
-save_cytoscape_json(H_visited_001, average_visited_counts_001, final_values_001, '/set/your/result/output/folder/yourfilename.json')
+save_json(H_visited_001, average_visited_counts_001, final_values_001, '/path/to/your/result/output/folder/yourfilename.json')
 
 # Save compound information to CSV for p-value <= 0.01 pathways
-save_compound_info_to_csv(average_visited_counts_001, final_values_001, '/set/your/result/output/folder/yourfilename.csv')
+save_compound_info_to_csv(average_visited_counts_001, final_values_001, '/path/to/your/result/output/folder/yourfilename.csv')
