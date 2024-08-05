@@ -1,4 +1,4 @@
-# Random Walk Analysis
+# Drug Discovery with RWR(Random Walk with Restart)
 
 This repository contains scripts to analyze biological pathways using random walks on a heterogeneous network. The analysis identifies important compounds related to pathways with significant p-values and visualizes the results.
 
