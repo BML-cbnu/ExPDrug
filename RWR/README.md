@@ -1,4 +1,4 @@
-# Pathway and Random Walk Analysis
+# Random Walk Analysis
 
 This repository contains scripts to analyze biological pathways using random walks on a heterogeneous network. The analysis identifies important compounds related to pathways with significant p-values and visualizes the results.
 
