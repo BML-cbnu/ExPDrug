@@ -52,22 +52,6 @@ Run `generate_pathway_mapping.py` to map gene expression data to the filtered pa
 python generate_pathway_mapping.py
 ```
 
-### Example Workflow
-
-1. **Filter Pathways:**
-   - Ensure the paths in `get_filtered_pathway_info.py` are correctly set.
-   - Run the script:
-     ```bash
-     python get_filtered_pathway_info.py
-     ```
-
-2. **Map Gene Expression Data:**
-   - Ensure the paths in `generate_pathway_mapping.py` are correctly set.
-   - Run the script:
-     ```bash
-     python generate_pathway_mapping.py
-     ```
-
 ### Code Details
 
 #### `get_filtered_pathway_info.py`
