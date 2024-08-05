@@ -18,11 +18,6 @@ Ensure you have the following dependencies installed:
 - pandas
 - tqdm
 
-You can install these using pip:
-```bash
-pip install pandas tqdm
-```
-
 ## Usage
 
 ### Step 1: Filter Reactome Pathway Data
