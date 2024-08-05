@@ -54,15 +54,3 @@ Install the required packages using the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
 ```
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue to discuss your changes.
-
-## Contact
-
-For any inquiries, please contact [Your Contact Information].
