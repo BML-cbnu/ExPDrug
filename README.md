@@ -9,7 +9,7 @@ This repository contains the ExPDRUG pipeline, designed for drug discovery using
 - `.util/config.py` : Handles file input/output paths and hyperparameter adjustments.
 - `.util/data_processor.py` : Manages data handling for model training, including:
   - Handling masking matrices between layers.
-  - Shuffling functionality for masking matrices.
+  - Shuffling functionality for masking matrices in permutation testing.
 - `.util/model.py` : Defines the model for training and relevance score computation, including the loss function.
 - `.util/trainer.py` : Handles model training, relevance score computation, and permutation test functionality.
 - `main.py` : The main script to run the entire pipeline.
