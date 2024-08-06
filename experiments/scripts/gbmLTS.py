@@ -18,22 +18,22 @@ import random
 def get_config():
     config = {
         "data_paths": {
-            "data_dir": '/home/bml_jk/py/lrpGP/data/gbm/'
+            "data_dir": 'set/your/path/to/GBM/data'
         },
         "file_paths": {
-            "gene_expression": 'filtered_GE_data.csv',
-            "gene_pathway_mapping": 'filtered_gene_pathway_mapping.csv',
-            "gene_pathway_matrix": 'gene_pathway_matrix.txt',
-            "input_to_h1_masking": 'masking_input_to_h1.txt',
-            "h1_to_pathway_masking": 'masking_h1_to_pathway.txt',
-            "model_save": '/home/bml_jk/py/lrpGP/savedModel/GBM/lts.pth',
-            "result_save": '/home/bml_jk/py/lrpGP/result/gbm_LTS/LTS_pathway_info.csv'
+            "gene_expression": 'set/your/path/to/GBM_GE_data.csv',
+            "gene_pathway_mapping": 'set/your/path/to/GBM_gene_pathway_mapping.csv',
+            "gene_pathway_matrix": 'set/your/path/to/gene_pathway_matrix.txt',
+            "input_to_h1_masking": 'set/your/path/to/masking_input_to_h1.txt',
+            "h1_to_pathway_masking": 'set/your/path/to/masking_h1_to_pathway.txt',
+            "model_save": 'set/your/path/to/savedModel/GBM/lts_failed_valid.pth',
+            "result_save": 'set/your/path/to/result/gbm_LTS/valid_LTS_failed_pathway_info.csv'
         },
         "params": {
             "min_genes_threshold": 20,
             "max_genes_threshold": 1000,
-            "target_class": 1,
-            "num_permutation_iterations": 1000,
+            "target_class": 0,
+            "num_permutation_iterations": 1,
             "num_lrp_iterations": 100,
             "top_30_nodes": 5,  # Configurable
             "middle_30_nodes": 2,  # Configurable

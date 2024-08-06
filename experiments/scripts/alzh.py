@@ -18,16 +18,16 @@ import random
 def get_config():
     config = {
         "data_paths": {
-            "data_dir": '/home/bml_jk/py/lrpGP/data/alzheimer'
+            "data_dir": 'set/your/path/to/alzheimer/data'
         },
         "file_paths": {
-            "gene_expression": '/home/bml_jk/py/lrpGP/data/alzheimer/alzh_GE_data.csv',
-            "gene_pathway_mapping": '/home/bml_jk/py/lrpGP/data/alzheimer/alzh_gene_pathway_mapping.csv',
-            "gene_pathway_matrix": 'gene_pathway_matrix.txt',
-            "input_to_h1_masking": 'masking_input_to_h1.txt',
-            "h1_to_pathway_masking": 'masking_h1_to_pathway.txt',
-            "model_save": '/home/bml_jk/py/lrpGP/savedModel/ALZH/alzh_valid.pth',
-            "result_save": '/home/bml_jk/py/lrpGP/result/alzh/valid_alzh_pathway_info.csv'
+            "gene_expression": 'set/your/path/to/alzh_GE_data.csv',
+            "gene_pathway_mapping": 'set/your/path/to/alzh_gene_pathway_mapping.csv',
+            "gene_pathway_matrix": 'set/your/path/to/gene_pathway_matrix.txt',
+            "input_to_h1_masking": 'set/your/path/to/masking_input_to_h1.txt',
+            "h1_to_pathway_masking": 'set/your/path/to/masking_h1_to_pathway.txt',
+            "model_save": 'set/your/path/to/savedModel/ALZH/alzh_valid.pth',
+            "result_save": 'set/your/path/to/result/alzh/valid_alzh_pathway_info.csv'
         },
         "params": {
             "min_genes_threshold": 1,
