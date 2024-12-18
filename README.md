@@ -3,16 +3,30 @@
 
 This repository contains the ExPDRUG pipeline, designed for drug discovery using gene expression data. Below you will find instructions on how to set up and run the pipeline.
 
-## File Structure
+# File Structure
 
-- `.util/logger.py` : Contains logging functions and result output features.
-- `.util/config.py` : Handles file input/output paths and hyperparameter adjustments.
-- `.util/data_processor.py` : Manages data handling for model training, including:
-    - Handling masking matrices between layers.
-    - Shuffling functionality for masking matrices in permutation test.
-- `.util/model.py` : Defines the model for training and relevance score computation, including the loss function.
-- `.util/trainer.py` : Handles model training, relevance score computation, and permutation test functionality.
-- `main.py` : The main script to run the entire pipeline.
+## util/logger.py
+- Contains logging functions and result output features.
+
+## util/config.py
+- Handles file input/output paths and hyperparameter adjustments.
+
+## util/data_processor.py
+- Manages data processing for model training, including:
+  - Creating and managing masking matrices between layers.
+  - Shuffling functionality for permutation tests.
+
+## util/model.py
+- Defines the neural network model and relevance score computation logic.
+- Includes the implementation of the custom loss function.
+
+## util/trainer.py
+- Handles model training, k-fold validation, and relevance score computation.
+- Implements permutation test functionality for model validation.
+
+## main.py
+- The main script to run the entire pipeline.
+- Orchestrates data loading, model training, and interpretation using LRP, IG, or GSEA methods.
 
 ## 1. Data Preparation
 
