@@ -8,7 +8,7 @@
 - **Description**: Script used for GBM LTS experiment.
 - **Instructions**: Ensure the path to the relevant data in the data folder is correct before execution.
 
-## gbmLTS_failed.py
+## gbmnon_LTS.py
 - **Description**: Script used for GBM Non-LTS experiment.
 - **Instructions**: Ensure the path to the relevant data in the data folder is correct before execution.
 
